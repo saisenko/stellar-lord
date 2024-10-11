@@ -1,19 +1,13 @@
 package units.droids;
 
-import java.util.List;
-import java.util.ArrayList;
-
 import units.droidAbilities.defenderDroidAbilities.Endure;
 import units.droidAbilities.defenderDroidAbilities.GrantShield;
 import units.droidTypes.DroidType;
 import units.droidTypes.droidSubtypes.DroidSubtype;
 import units.droidTypes.droidSubtypes.DefenderDroidSubtype;
 
-import units.droidAbilities.Ability;
-
 public class DefenderDroid extends Droid {
     protected DroidSubtype droidSubtype;
-    protected List<Ability> abilities = new ArrayList<>();
 
     public DefenderDroid(
             String droidName,
@@ -30,7 +24,7 @@ public class DefenderDroid extends Droid {
                 this.droidSHD = 50;
                 this.droidSPD = 4;
 
-                abilities.add(new Endure());
+                this.addAbility(new Endure());
                 break;
             case GUARDIAN:
                 this.maxHP = 300;
@@ -38,10 +32,12 @@ public class DefenderDroid extends Droid {
                 this.droidSHD = 0;
                 this.droidSPD = 3;
 
-                abilities.add(new GrantShield());
+                this.addAbility(new GrantShield());
                 break;
         }
 
         this.droidHP = this.maxHP;
     }
+
+    public DroidSubtype getDroidSubtype() {return this.droidSubtype;}
 }

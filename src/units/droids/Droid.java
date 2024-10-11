@@ -4,6 +4,7 @@ import units.CombatStatus;
 import units.droidAbilities.Ability;
 import units.droidTypes.DroidType;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Droid {
@@ -29,6 +30,7 @@ public class Droid {
         this.droidType = droidType;
 
         this.combatStatus = CombatStatus.INTACT;
+        this.abilities = new ArrayList<>();
     }
 
     public boolean isIntact() {return this.combatStatus == CombatStatus.INTACT;}
@@ -40,11 +42,15 @@ public class Droid {
     public int getDroidSHD() {return droidSHD;}
     public int getDroidSPD() {return droidSPD;}
 
+    public DroidType getDroidType() {return this.droidType;}
+    public Ability getAbility() {return this.abilities.getFirst();}
+
     public void setDroidHP(int droidHP) {this.droidHP = Math.min(droidHP, this.maxHP);}
     public void setDroidDMG(int droidDMG) {this.droidDMG = Math.max(droidDMG, 0);}
     public void setDroidSHD(int droidSHD) {this.droidSHD = Math.max(droidSHD, 0);}
     public void setDroidSPD(int droidSPD) {this.droidSPD = droidSPD;}
 
+    public void addAbility(Ability ability) {this.abilities.add(ability);}
     /**
      * Process incoming damage. If shield is active, damage/destroy it.
      * If droid HP fell below 0, disconnect droid.
@@ -57,7 +63,7 @@ public class Droid {
 
         if (incomeDMG >= droidSHD) {
             setDroidSHD(0);
-            int leftoverDMG = droidSHD - incomeDMG;
+            int leftoverDMG = Math.abs(droidSHD - incomeDMG);
             setDroidHP(droidHP - leftoverDMG);
         } else {
             setDroidSHD(droidSHD - incomeDMG);
@@ -70,7 +76,8 @@ public class Droid {
     }
 
     public void attackEnemy(Droid targetDroid) {
-        targetDroid.processReceivedDMG(this.getDroidDMG());
+        int damage = this.getDroidDMG();
+        targetDroid.processReceivedDMG(damage);
     }
 
     public void supportAlly(Droid targetDroid) {

@@ -1,0 +1,21 @@
+COMBATANT 1: Battle Droid <CT-47> | Additional Intel: {Droid Type: COMBAT}
+COMBATANT 1, params: Battle Droid <CT-47> | Additional Intel: {Droid Type: COMBAT}
+Unit Stats: {MAX_HP: 100 / HP: 100 / DMG: 30 / SHD: 0 / SPD: 5}
+
+COMBATANT 2: Battle Droid <CT-47> | Additional Intel: {Droid Type: COMBAT}
+COMBATANT 2, params: Battle Droid <CT-47> | Additional Intel: {Droid Type: COMBAT}
+Unit Stats: {MAX_HP: 100 / HP: 100 / DMG: 30 / SHD: 0 / SPD: 5}
+
+TURN 1:
+Droid Battle Droid <CT-47> attacked Battle Droid <CT-47>
+Droid Battle Droid <CT-47> attacked Battle Droid <CT-47>
+
+TURN 2:
+Droid Battle Droid <CT-47> attacked Battle Droid <CT-47>
+Droid Battle Droid <CT-47> used <Grenade> on Battle Droid <CT-47>
+
+TURN 3:
+Droid Battle Droid <CT-47> used <Grenade> on Battle Droid <CT-47>
+Droid Battle Droid <CT-47> used <Grenade> on Battle Droid <CT-47>
+
+Droid Battle Droid <CT-47> emerged victorious!

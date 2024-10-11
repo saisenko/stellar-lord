@@ -1,0 +1,12 @@
+TURN 1
+TeamB: Droid Battle Droid <GH-33> used <Grant Shield> on Battle Droid <TF-21>
+TeamA: Droid Battle Droid <ST-15> attacked Battle Droid <ST-15>
+TeamA: Droid Battle Droid <ST-15> attacked Battle Droid <ST-15>
+TeamB: Droid Battle Droid <HS-03> attacked Battle Droid <CT-47>
+TeamA: Droid Battle Droid <TF-21> used <Grenade> on Battle Droid <CT-47>
+TeamA: Droid Battle Droid <TF-21> attacked Battle Droid <CT-47>
+TeamB: Droid Battle Droid <KR-10> attacked Battle Droid <TF-21>
+TeamA: Droid Battle Droid <TF-21> attacked Battle Droid <CT-47>
+TeamB: Droid Battle Droid <CT-47> attacked Battle Droid <TF-21>
+TeamB: Droid Battle Droid <XT-88> used <Explode> on Battle Droid <TF-21>
+Team B emerged victorious!
